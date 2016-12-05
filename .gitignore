@@ -1,3 +1,5 @@
+/build
+
 .DS_Store
 Thumbs.db
 .npm
@@ -5,4 +7,4 @@ Thumbs.db
 node_modules
 npm-debug.log*
 logs
-*.log
+*.log/

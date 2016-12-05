@@ -36,6 +36,7 @@ var
   assets = require('metalsmith-assets'),
   htmlmin = devBuild ? null : require('metalsmith-html-minifier'),
   browsersync = devBuild ? require('metalsmith-browser-sync') : null,
+  multiLanguage = require('metalsmith-multi-language'),
 
   // custom plugins
   setdate = require(dir.lib + 'metalsmith-setdate'),
@@ -105,7 +106,15 @@ var ms = metalsmith(dir.base)
   })) // word count
   .use(moremeta()) // determine root paths and navigation
   .use(inplace(templateConfig)) // in-page templating
-  .use(layouts(templateConfig)); // layout templating
+  .use(layouts(templateConfig)) // layout templating
+  .use(multiLanguage({ 
+      default: 'en', 
+      locales: [
+          'en', 
+          'es'
+          ] 
+      }
+  ));
 
 if (htmlmin) ms.use(htmlmin()); // minify production HTML
 

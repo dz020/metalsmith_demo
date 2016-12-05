@@ -6,7 +6,7 @@ priority: 1.0
 
 [![Node.js]({{ root }}/images/nodejs.png)](http://nodejs.org/)
 
-This is a static website generated using the Node.js-powered **[Metalsmith](http://metalsmith.io)** and various published and custom plugins.
+guten tag auf englisch
 
 This is a demonstration rather than a recommended way to build a static site. Your requirements will be different. Please use any part of the code as you wish.
 
